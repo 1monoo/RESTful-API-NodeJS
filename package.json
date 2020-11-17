@@ -1,0 +1,27 @@
+{
+  "name": "restful-api-nodejs",
+  "version": "1.0.0",
+  "description": "Node RESTful API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1monoo/RESTful-API-NodeJS.git"
+  },
+  "keywords": [
+    "Node",
+    "RESTful",
+    "API"
+  ],
+  "author": "Cristian Dominguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1monoo/RESTful-API-NodeJS/issues"
+  },
+  "homepage": "https://github.com/1monoo/RESTful-API-NodeJS#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
