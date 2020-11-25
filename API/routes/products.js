@@ -3,13 +3,13 @@ const router = express.Router();
 
 router.get('/', (rep, res, next) =>{
     res.status(200).json({
-        messenge: 'Handling GET request to /products'
+        message: 'Handling GET request to /products'
     });
 });
 
 router.post('/', (rep, res, next) =>{
     res.status(200).json({
-        messenge: 'Handling POST request to /products'
+        message: 'Handling POST request to /products'
     });
 });
 
