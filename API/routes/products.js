@@ -38,7 +38,11 @@ router.get('/:productId', (req, res, next) =>{
 
 router.patch('/:productId', (req, res, next) =>{
     res.status(200).json({
+<<<<<<< HEAD
         message: 'Update product!'
+=======
+        message: 'Handling POST request to /products'
+>>>>>>> be89fd3660fd94b75e9b48ffa69b18fe3980d353
     });
 
 });
