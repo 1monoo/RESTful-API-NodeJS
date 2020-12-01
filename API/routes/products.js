@@ -1,16 +1,53 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/', (rep, res, next) =>{
+router.get('/', (req, res, next) =>{
     res.status(200).json({
-        messenge: 'Handling GET request to /products'
+        message: 'Handling GET request to /products'
     });
 });
 
-router.post('/', (rep, res, next) =>{
+
+router.post('/', (req, res, next) =>{
+    const product ={
+        name: req.body.name,
+        price: req.body.price
+
+    };
     res.status(200).json({
-        messenge: 'Handling POST request to /products'
+        message: 'Handling POST request to /products',
+        createdProduct: product 
     });
 });
+
+router.get('/:productId', (req, res, next) =>{
+    const id= req.params.productId;
+    if(id === 'special'){
+        res.status(200).json({
+            message: 'you discovered the special ID',
+            id: id
+        });
+    }    else {
+            res.status(200).json({
+                messege:'You passed an ID'
+
+            });
+        }
+    
+}),
+
+router.patch('/:productId', (req, res, next) =>{
+    res.status(200).json({
+        message: 'Update product!'
+    });
+
+});
+
+router.delete('/:productId', (req, res, next) =>{
+    res.status(200).json({
+        message: 'Delete product!'
+    });
+});
+
 
 module.exports = router;
