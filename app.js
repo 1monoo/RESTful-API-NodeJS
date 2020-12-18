@@ -2,10 +2,21 @@ const express = require('express');
 const app = express();
 const morgan = require ('morgan');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useFindAndModify', false);
+mongoose.set('useCreateIndex', true);
+mongoose.set('useUnifiedTopology', true);
 
 
 const productRoutes = require('./API/routes/products');
 const orderRoutes = require('./API/routes/orders');
+
+
+mongoose.connect('mongodb+srv://1mono:' + process.env.MONGO_ATLAS_PW + '@cluster0.2keax.mongodb.net/Cluster0?retryWrites=true&w=majority',
+);
+
 
 
 app.use(morgan('dev'));
